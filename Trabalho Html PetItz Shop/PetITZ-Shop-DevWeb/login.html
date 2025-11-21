@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Petitz Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logo-petitzshop.jpg" alt="Petitz Shop Logo" class="logo">
+            <h1 class="site-name">PETITZ SHOP</h1>
+        </header>
+
+        <main>
+            <h2 class="form-title">Entrar</h2>
+            <p class="form-subtitle">Entre e continue aproveitando todos os nossos benefícios</p>
+
+            <form class="form" onsubmit="fazer_login(event)">
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Senha" required>
+                </div>
+
+                <a href="#" class="forgot-password">Esqueci a senha</a>
+
+                <button type="submit" class="btn-primary">ENTRAR</button>
+            </form>
+
+            <p class="register-link">Ainda não tem conta? <a href="criar-conta.html">Cadastrar</a></p>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Petitz Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🐾 Petitz Shop</div>
+    <button class="menu-btn">☰</button>
+    <button class="logout-btn" onclick="logout()" style="position: absolute; right: 60px; padding: 8px 15px; background: #ff6b6b; color: white; border: none; border-radius: 5px; cursor: pointer;">Sair</button>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <h2>Olá, <span class="username">Nome do Usuário</span> 👋</h2>
+      <p>Bem-vindo(a) de volta!</p>
+    </section>
+
+    <section class="pet-card">
+      <div class="pet-photo">
+        <span>+</span>
+      </div>
+      <div class="pet-info">
+        <h3>Nome do Pet</h3>
+        <p>Raça: ———</p>
+        <p>Idade: ———</p>
+      </div>
+    </section>
+
+    <section class="quick-actions">
+      <button class="action-btn">🐾 Nutrição</button>
+      <button class="action-btn">❤️ Saúde</button>
+      <button class="action-btn">🎾 Atividades</button>
+      <button class="action-btn">📋 Relatórios</button>
+    </section>
+
+    <section class="share">
+      <button class="share-btn">🔗 Compartilhar perfil</button>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

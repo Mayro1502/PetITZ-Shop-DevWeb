@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Conta - Petitz Shop</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cadastro.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="img/logo-petitzshop.jpg"
+          alt="Petitz Shop Logo"
+          class="logo"
+        />
+        <h1 class="site-name">PETITZ SHOP</h1>
+      </header>
+
+      <main>
+        <h2 class="form-title">Criar Conta</h2>
+        <p class="form-subtitle">
+          Cadastre-se e aproveite todos os recursos do Petitz Shop
+        </p>
+
+        <form class="form">
+          <div class="input-group">
+            <input id="nome" type="text" placeholder="Nome completo" required />
+          </div>
+
+          <div class="input-group">
+            <input id="email" type="email" placeholder="Email" required />
+          </div>
+
+          <div class="input-group">
+            <input id="senha" type="password" placeholder="Senha" required />
+          </div>
+
+          <div class="input-group">
+            <input
+              id="confirmar"
+              type="password"
+              placeholder="Confirmar senha"
+              required
+            />
+          </div>
+
+          <button type="button" onclick="cadastrar()">Cadastrar</button>
+        </form>
+
+        <p class="register-link">
+          Já tem uma conta? <a href="login.html">Entrar</a>
+        </p>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
