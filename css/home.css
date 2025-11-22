@@ -1,122 +1,230 @@
 body {
-  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg,#fffaf0 0%, #fff6e6 100%);
+  font-family: "Poppins", Arial, sans-serif;
+  color: #222;
   margin: 0;
-  padding: 0;
-  background-color: #f6f6f6;
-  color: #333;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffd966;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* Header */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 50;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-.menu-btn {
-  font-size: 1.4rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.container {
-  padding: 2rem;
-  max-width: 1000px;
+.header-inner {
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.welcome {
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.welcome h2 {
-  margin-bottom: 0.3rem;
-}
-
-.pet-card {
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 1.5rem;
+  padding: 14px 20px;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  justify-content: space-between;
 }
 
-.pet-photo {
-  width: 90px;
-  height: 90px;
-  background-color: #f0f0f0;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
   border-radius: 50%;
+}
+
+.brand-title {
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #222;
+}
+
+/* Nav links */
+.main-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 8px;
+}
+
+/* Main container */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+}
+
+/* Top row: greeting and CTA */
+.top-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.greeting h1 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* CTA button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg,#ff9f2c,#f5b642);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(245,180,66,0.18);
+}
+
+.btn-outline {
+  background: #fff;
+  color: #333;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Pets section */
+.section { margin-bottom: 28px; }
+.section-title {
+  font-size: 16px;
+  color: #333;
+  margin: 14px 0;
+}
+
+/* Placeholder (sem pets) */
+.no-pets {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.placeholder-img {
+  width: 140px;
+  opacity: 0.85;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.no-pets-text {
+  color: #444;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* Pets list / card */
+.pets-list {
+  display: none; /* mostra com body.has-pets */
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.has-pets .pets-list { display: flex; flex-direction: column; }
+
+.has-pets .no-pets { display: none; } /* esconde placeholder quando há pets */
+
+.pet-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 480px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.pet-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: linear-gradient(180deg,#fff5e6,#fff0d8);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  color: #aaa;
-  border: 2px dashed #ccc;
-  cursor: pointer;
-  transition: background 0.3s;
+  font-size: 28px;
 }
 
-.pet-photo:hover {
-  background-color: #f8f8f8;
-}
+.avatar-placeholder { font-size: 26px; }
 
-.pet-info h3 {
-  margin: 0;
-}
+.pet-meta { flex: 1; }
+.pet-name { margin: 0; font-size: 16px; font-weight: 700; color:#222; }
+.pet-desc, .pet-extra { margin: 2px 0; color: #666; font-size: 13px; }
 
-.quick-actions {
+.pet-actions { font-size: 13px; }
+
+/* Services grid */
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 12px;
 }
 
-.action-btn {
-  background-color: #fff;
-  border: none;
-  border-radius: 16px;
-  padding: 1rem;
-  font-size: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  cursor: pointer;
-  transition: all 0.3s;
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.action-btn:hover {
-  transform: translateY(-3px);
-  background-color: #ffe48c;
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-.share {
-  text-align: center;
-  margin-top: 2rem;
+.service-ico {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
 }
 
-.share-btn {
-  background-color: #ffd966;
-  border: none;
-  border-radius: 30px;
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s;
+/* Titulos e textos do serviço */
+.service-card h4 { margin: 0; font-size: 15px; }
+.service-card p { margin: 0; color:#666; font-size:13px; }
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .top-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .cta-area { align-self: flex-end; }
 }
 
-.share-btn:hover {
-  background-color: #ffcd39;
+@media (max-width: 520px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .header-inner { padding: 10px 14px; }
+  .page { padding: 18px 12px 60px; }
 }

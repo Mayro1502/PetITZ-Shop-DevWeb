@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Pet</title>
+    <link rel="stylesheet" href="css/cadastro-pet.css">
+</head>
+
+<body>
+    <header class="top-bar">
+    <a href="home.html" class="back-btn">←</a>
+    <img src="img/logo-petitzshop.png" alt="Logo" class="logo">
+    <h2>Cadastrar Pet</h2>
+</header>
+
+
+    <main class="container">
+        <!-- Foto do pet -->
+        <label class="photo-upload">
+            <input type="file" accept="image/*">
+            <div class="photo-circle">
+                <span>+</span>
+            </div>
+            <p>Adicionar Foto</p>
+        </label>
+
+        <!-- Formulário -->
+        <form class="form">
+
+            <div class="input-group">
+                <label>Nome do Pet</label>
+                <input type="text" placeholder="Digite o nome do pet">
+            </div>
+
+            <div class="input-group">
+                <label>Espécie</label>
+
+                <div class="select-box">
+                    <select>
+                        <option value="">Selecione uma espécie</option>
+                        <option>Cachorro</option>
+                        <option>Gato</option>
+                        <option>Pássaro</option>
+                        <option>Coelho</option>
+                        <option>Hamster</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Raça</label>
+                <input type="text" placeholder="Digite a raça">
+            </div>
+
+            <div class="input-group">
+                <label>Idade</label>
+                <input type="text" placeholder="Ex: 2 anos">
+            </div>
+
+            <div class="input-group">
+                <label>Peso</label>
+                <input type="text" placeholder="Ex: 5 kg">
+            </div>
+
+            <button type="submit" class="btn">Cadastrar Pet</button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

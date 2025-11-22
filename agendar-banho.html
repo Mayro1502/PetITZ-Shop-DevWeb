@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/agendar.css" />
+    <title>Agendar Banho</title>
+</head>
+<body>
+    <header class="top-bar">
+        <a href="home.html" class="back-button">←</a>
+        <div class="title-group">
+            <h2>Agendar Banho</h2>
+            <p>Escolha a melhor data e horário</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <label>Selecione o Pet</label>
+        <select>
+            <option>Escolha um pet</option>
+        </select>
+
+        <label>Data do Atendimento</label>
+        <input type="date" />
+
+        <label>Horário</label>
+
+        <div class="time-grid">
+            <button>08:00</button>
+            <button>09:00</button>
+            <button>10:00</button>
+            <button>11:00</button>
+            <button>14:00</button>
+
+            <button>15:00</button>
+            <button>16:00</button>
+            <button>17:00</button>
+            <button>18:00</button>
+        </div>
+
+        <label>Observações (opcional)</label>
+        <textarea placeholder="Alguma informação adicional sobre seu pet ou preferências..."></textarea>
+
+        <button class="confirm-btn">CONFIRMAR AGENDAMENTO</button>
+    </div>
+</body>
+</html>

@@ -1,44 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Petitz Shop</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/home.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Petitz Shop — Home</title>
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="logo">🐾 Petitz Shop</div>
-    <button class="menu-btn">☰</button>
+  <!-- Adicione a classe `has-pets` ao body quando houver pets:
+       <body class="has-pets"> -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="img/logo-petitzshop.png" alt="Logo Petitz Shop" class="brand-logo">
+        <span class="brand-title">PETITZ SHOP</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="agendamentos.html" class="nav-link">📅 Agendamentos</a>
+        <a href="perfil.html" class="nav-link">👤 Perfil</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="welcome">
-      <h2>Olá, <span class="username">Nome do Usuário</span> 👋</h2>
-      <p>Bem-vindo(a) de volta!</p>
-    </section>
-
-    <section class="pet-card">
-      <div class="pet-photo">
-        <span>+</span>
+  <main class="page">
+    <!-- Topo: saudação + botão cadastrar (lado a lado em desktop) -->
+    <section class="top-row">
+      <div class="greeting">
+        <h1>Olá, <span class="username">Usuário</span> 👋</h1>
+        <p class="subtitle">Bem-vindo ao Petitz Shop. Como podemos ajudar você e seu pet hoje?</p>
       </div>
-      <div class="pet-info">
-        <h3>Nome do Pet</h3>
-        <p>Raça: ———</p>
-        <p>Idade: ———</p>
+
+      <div class="cta-area">
+        <a href="cadastro-pet.html" class="btn btn-primary btn-cadastrar">
+          <span class="btn-ico">🐾</span> Cadastrar Pet
+        </a>
       </div>
     </section>
 
-    <section class="quick-actions">
-      <button class="action-btn">🐾 Nutrição</button>
-      <button class="action-btn">❤️ Saúde</button>
-      <button class="action-btn">🎾 Atividades</button>
-      <button class="action-btn">📋 Relatórios</button>
+    <!-- Meus Pets -->
+    <section class="section pets-section">
+      <h2 class="section-title">Meus Pets</h2>
+
+      <!-- PLACEHOLDER (visível quando NÃO há pets) -->
+      <div class="no-pets">
+        <img src="img/placeholder-pet.png" alt="Sem pets" class="placeholder-img">
+        <p class="no-pets-text">Você ainda não cadastrou nenhum pet</p>
+        <a href="cadastro-pet.html" class="btn btn-outline">Cadastrar Pet</a>
+      </div>
+
+      <!-- LISTA DE PETS (por padrão escondida; backend mostrará) -->
+      <div class="pets-list">
+        <!-- Exemplo de card (backend irá repetir / preencher) -->
+        <article class="pet-card">
+          <div class="pet-avatar">
+            <!-- quando existir foto do pet, substituir por <img src="..."> -->
+            <div class="avatar-placeholder">🐶</div>
+          </div>
+          <div class="pet-meta">
+            <h3 class="pet-name">Ada</h3>
+            <p class="pet-desc">Cachorro • SRD</p>
+            <p class="pet-extra">2 anos • 12 kg</p>
+          </div>
+          <div class="pet-actions">
+            <a href="perfil-pet.html" class="link-small">Ver perfil</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="share">
-      <button class="share-btn">🔗 Compartilhar perfil</button>
+    <!-- Nossos Serviços -->
+    <section class="section services-section">
+      <h2 class="section-title">Nossos Serviços</h2>
+
+      <div class="services-grid">
+        <a class="service-card" href="agendar-consulta.html">
+          <div class="service-ico">📅</div>
+          <h4>Consulta</h4>
+          <p>Agende uma consulta veterinária</p>
+        </a>
+
+        <a class="service-card" href="agendar-banho.html">
+          <div class="service-ico">💧</div>
+          <h4>Banho</h4>
+          <p>Banho completo para seu pet</p>
+        </a>
+
+        <a class="service-card" href="agendar-tosa.html">
+          <div class="service-ico">✂️</div>
+          <h4>Tosa</h4>
+          <p>Tosa higiênica ou estética</p>
+        </a>
+
+        <a class="service-card" href="agendar-vacinacao.html">
+          <div class="service-ico">💉</div>
+          <h4>Vacinação</h4>
+          <p>Mantenha a saúde em dia</p>
+        </a>
+      </div>
     </section>
   </main>
 </body>

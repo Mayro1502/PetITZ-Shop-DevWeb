@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #fff8ec;
+}
+
+/* Topo */
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff1d8;
+    border-bottom: 1px solid #e0c9a8;
+}
+
+.top-bar .logo {
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.top-bar h2 {
+    font-size: 1.4rem;
+    color: #4a3d2f;
+}
+
+/* Container */
+.container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Foto */
+.photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.photo-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #ffe4b8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #f59f00;
+    margin-bottom: 8px;
+    border: 2px dashed #f2a83a;
+    transition: 0.3s;
+}
+
+.photo-circle:hover {
+    background-color: #ffdca1;
+}
+
+.photo-upload input {
+    display: none;
+}
+
+.photo-upload p {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Inputs */
+.form {
+    margin-top: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #4b3f39;
+}
+
+.input-group input,
+.select-box select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d1c6b3;
+    background-color: white;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input-group input:focus,
+.select-box select:focus {
+    border-color: #f5a623;
+}
+
+/* Botão */
+.btn {
+    width: 100%;
+    background: linear-gradient(to right, #ff9f1c, #ff7a00);
+    border: none;
+    padding: 14px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+}
+
+/* Botão de voltar */
+.back-btn {
+    font-size: 1.8rem;
+    color: #4a3d2f;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    color: #ff8b00;
+    transform: scale(1.15);
+}
+
